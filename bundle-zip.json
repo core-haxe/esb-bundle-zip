@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "bundle-zip": {
+            "name": "bundle-zip",
+            "bundle-file": "bundle-zip",
+            "bundle-entry-point": "bundles.zip.Bundle",
+            "auto-load": false
+        }
+    }
+}
