@@ -136,7 +136,7 @@ class ZipFile {
         inflator.push(f.data.getData(), true);
         var result = inflator.result;
         if (result == null) {
-            throw "its null";
+            throw "could not inflate zip file (" + inflator.err + " - " + inflator.msg + ")";
         }
 
         var resultBytes = Bytes.ofData(result.buffer.slice(result.byteOffset, result.byteLength + result.byteOffset));
