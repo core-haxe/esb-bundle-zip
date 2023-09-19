@@ -98,7 +98,7 @@ class ZipFile {
 
         #if js
 
-        var deflator = new bundles.zip.externs.pako.Deflate({level: level});
+        var deflator = new bundles.zip.externs.pako.Deflate({level: level, windowBits: windowBits});
         deflator.push(f.data.getData(), true);
         var result = deflator.result;
         var resultBytes = Bytes.ofData(result.buffer.slice(result.byteOffset, result.byteLength + result.byteOffset));
